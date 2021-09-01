@@ -1,0 +1,58 @@
+create database IF NOT EXISTS navkar;
+use navkar;
+create table admin (
+username varchar(10) NOT NULL UNIQUE,
+email  varchar(50) NOT NULL,
+password varchar(10) NOT NULL
+
+);
+
+create table contactus (
+office_add  varchar(1000) NOT NULL,
+phnochar  varchar(10)  NOT NULL,
+factory_add varchar(1000)  NOT NULL,
+salesemail varchar(50)  NOT NULL,
+helpdeskemail varchar(50)  NOT NULL
+);
+
+create table product (
+pid int NOT NULL,
+name  varchar(25) NOT NULL,
+description  varchar(2500) NOT NULL,
+material  varchar(10)  NOT NULL,
+img  varchar(50) ,
+chart  varchar(50) 
+);
+
+create table customer (
+cid int Primary key,
+name varchar(15)  NOT NULL UNIQUE,
+email varchar(50)  NOT NULL,
+password  varchar(10)  NOT NULL
+);
+
+create table request(
+rid int NOT NULL primary key,
+pid int NOT NULL,
+cid int NOT NULL,
+order_date date NOT NULL,
+note varchar(2500)
+);
+
+Insert into admin values("chinu","chinujain2@gmail.com","chinu");
+Insert into contactus values(
+	"Building no.-8, C-wing, Flat no.-32,
+	 Amol Nagar Lourdss, Peirera colony
+	 Naigaon (E), Thane-401208",
+	"9224297336",	
+	"94, Kohli Post Kaman,
+	 Near Western Express Highway,
+	 Opp. Ashirwad Hotel,
+	Naigaon (E), Thane-401208",
+	"sales@navkarengg.com",
+	"info@navkarengg.com"
+	
+);
+Insert into product values(1,"elbow","this is elbow","steel","","");
+Insert into customer values(1,"nikhil singh","nikhilsingh526452@gmail.com","nick1234");
+Insert into request values(1,1,1,"2021-08-31","i want to buy this product");
