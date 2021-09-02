@@ -1,0 +1,19 @@
+.admin-card{
+    margin:50px;
+}
+.adminleft{
+    width:30%;
+}
+.adminright{
+    width:70%;
+    border-left: 1px solid black;
+}
+.admin{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url("../img/admin.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 10px;
+}

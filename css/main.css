@@ -38,7 +38,7 @@ body{
 .sizefull{
     height: 100%;
 }
-nav{
+nav ,footer {
     background-color: aquamarine;
     padding: 10px;
 }
@@ -57,7 +57,7 @@ nav{
     box-shadow: 5px 1px 33px -1px rgba(0, 0, 0, 0.25);
     margin: 10px;
 }
-.product-card{
+.product-card ,.request-card{
 
     width: 500px;
     height: fit-content;
@@ -68,28 +68,37 @@ nav{
     height: 150px;
     width: 150px;
 }
-.product{
+.product,.request{
     width: 50%;
     height: 250px;
 }
-.product>div{
+.product>div ,.request>div{
     padding: 10px;
 }
-.product-title{
+.product-title ,.request-number{
     font-size: 20px;
     margin-top: 30px;
     text-decoration: underline;
     font-weight: bold;
 }
-.product-desc{
+.product-desc ,.request-note{
     text-overflow: ellipsis;    
     height: 20%;
     overflow: hidden;
 }
-.aboutus-card{
-    margin:30px;
+.aboutus-card , .contactus-card{
     padding: 30px;
+    margin: 50px;
 }
-.aboutus-card>div{
+.aboutus-card>div , .contactus-card>div>div{
     margin-top: 25px;
+}
+.contact{
+    justify-content: space-between;
+}
+.contactleft{
+    width: 30%;
+}
+.contactright{
+    width: 70%;
 }
