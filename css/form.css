@@ -1,0 +1,27 @@
+.form{
+    margin-top: 50px;
+    width: 50%;
+}
+table{
+    width: 100%;
+    justify-content: center;
+}
+td{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    
+}
+tr{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type=submit]{
+    position: relative;
+width: 50%;
+height: 34px;
+background: #F2AA4C;
+border-radius: 25px;
+}
