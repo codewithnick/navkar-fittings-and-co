@@ -7,9 +7,27 @@
                 logo here
             </div>
             <div>
-               Navkar Fittings and Co
+                <?php
+                session_start();
+                if(verifysession()){   
+                $sql="SELECT name FROM customer where cid=".$_SESSION['cid'];
+                $result=mysqli_query($conn,$sql);
+                while($rows=mysqli_fetch_array($result)){
+                    ?>Welcome <?php echo $rows[0];?>
+                    <?php
+                }
+            }
+            else{
+                ?>
+                <div>
+               Navkar Fittings Co
             </div>
+            <?php
             
+            }
+                
+                ?>
+            </div>
             <ul class= "flex flex-spacearound" style="width:70%;">
                 <li> <a href="./index.php"> Home  </a></li>
                 <li> <a href="./aboutus.php"> About Us </a> </li>
@@ -18,7 +36,7 @@
                 <li> <a href="./contactus.php"> Contact us </a> </li>
                 <li> <a href="./login.php"> 
                     <?php
-                    session_start();
+                    
                     if(!verifysession()){
                         echo "Login";
                     }

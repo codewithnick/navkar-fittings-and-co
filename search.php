@@ -1,0 +1,42 @@
+<?php include("header.php"); ?>
+<?php include("connection.php"); ?>
+<div style="height:fit-content;">
+    <div>
+        <div class="sizefull flex flex-center flex-col ">
+            <?php
+            if(isset($_GET['s'])){
+                $s="%".$_GET['s']."%";
+                $sql="SELECT * FROM product Where name LIKE '$s' or category LIKE '$s' or description LIKE '$s' or material LIKE '$s' ORDER BY name";
+                $result=mysqli_query($conn,$sql);
+                while($rows=mysqli_fetch_array($result)){?>
+                <!--start here -->
+                    <div class="card product-card flex flex-spacearound">
+                        <img src="<?php echo $rows['img'];?>" class="product-img">
+                        <div class="sizefull product flex flex-col ">
+                        <div class="product-title text-left">
+                                <?php echo $rows['name']?>
+                            </div>
+                            <div class="text-left">
+                                Category: <?php echo $rows['category']?>
+                            </div>
+                            <div class="product-material text-left">
+                                Material: <?php echo $rows['material']?>
+                            </div>
+                            <div class="product-desc text-left textgrey">
+                                <?php echo $rows['description']?>
+                            </div>
+                            <div class="text-right">
+                                <a href=<?php echo "./product.php?pid=".$rows["pid"]?>> View More...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                <!--end here -->
+            <?php
+                }}?>
+
+        </div>
+    </div>
+</div>
+
+<?php include("footer.php"); ?>

@@ -1,12 +1,19 @@
 .admin-card{
     margin:50px;
+    height:inherit;
 }
 .adminleft{
     width:30%;
+    justify-content: space-between;
 }
 .adminright{
+    align-items: center;
     width:70%;
     border-left: 1px solid black;
+    overflow-y:scroll;
+}
+.adminright> form{
+    margin-top: 30px;
 }
 .admin{
     width: 200px;
@@ -16,4 +23,25 @@
     background-position: center;
     background-repeat: no-repeat;
     margin: 10px;
+}
+.admin-name{
+    border-bottom: 1px solid black;
+}
+.contact-card{
+    width: 100%;
+    margin-top: 50px;
+}
+.customerview  {
+    width: 70%;
+    display: table;
+}
+.customerview>tbody>tr{
+    display: table-row;
+}
+.customerview>tbody>tr>th, .customerview>tbody>tr>td{
+    display: table-cell;
+    padding: 5px;
+    width: fit-content;
+    border: 1px solid black;
+
 }

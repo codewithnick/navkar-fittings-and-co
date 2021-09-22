@@ -1,31 +1,96 @@
 <?php include("header.php"); ?>
+<?php include("connection.php"); ?>
 
-
-<div class="sizefull flex flex-center flex-col ">
-
-            <div class="sizefull card flex flex-spacearound">
-                <img src="./img/bg.jpg" class="product-img"> 
-                <div class="sizefull product flex flex-col ">
+<div class="sizefull flex">
+<?php
+                $pid=$_GET['pid'];
+                $sql="SELECT * FROM product where pid=$pid";
+                $result=mysqli_query($conn,$sql);
+                while($rows=mysqli_fetch_array($result)){?>
+            
+                
+                <div class="sizefull product flex flex-col " style="width:50%;">
+                    <div>
+                        <img alt="Product Image Unavailable" src="<?php echo $rows['img'];?>" class="product-img"> 
+                    </div>
                     <div class="product-title text-center">
-                        Product Title
+                        Title: <?php echo $rows['name'];?>
                     </div>
                     <div class="product-material text-center">
-                        steel
+                        Material: <?php echo $rows['material']?>
+                    </div>
+                    <div class="text-center">
+                        Category: <?php echo $rows['category']?>
+                    </div>
+                    <div class="product-title text-left">
+                        Description
                     </div>
                     <div class="text-left">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                         Accusantium, recusandae optio corporis laudantium voluptate illum laboriosam ducimus obcaecati dolorum quibusdam ad! Explicabo repellat, possimus unde error obcaecati sapiente voluptates nulla.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                         Sapiente doloremque provident nulla sequi ea eaque quasi exercitationem facere rem aperiam, at, fugit deleniti odit ipsam distinctio. Voluptatum, soluta. Nesciunt, enim?
+                    <?php echo $rows['description']?>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore porro mollitia consectetur, dolor quibusdam, quam neque placeat nostrum atque doloremque aspernatur exercitationem rerum. Quas praesentium suscipit, necessitatibus fuga commodi corrupti quis rem quo velit laborum iusto distinctio soluta obcaecati perferendis.
                     </div>
                     <div>
-                        <div>send enquiry</div>
-                        <div><button>request</button></div>
+                    <img alt="chart unavailable" src="<?php echo $rows['chart'];?>" > 
                     </div>
                 </div>
-            </div>          
-            
+                <div class="flex sizefull" style="width:50%;border-left:1px solid grey">
+                        
+                        <form action="newrequest.php" method="post" class="widthfull">
+                            <input type="hidden" name="pid" value="<?php echo $rows['pid'];?>">
+                            <table class="widthfull">
+                                <tr>
+                                    <th>Custom Request</th>
+                                </tr>
+                                <?php
+                                if(!verifysession()){
+                                    ?>
+                                    <tr>
+                                        <td>
+                                        You need to <a class="linktext" href="login.php">login</a> to Send custom requests
+                                        </td>
+                                    </tr>
+                                    <?php
+                                }else{
+                                ?>
+                                <tr>
+                                    <td>Size</td>
+                                    <td><input type="text" name="size" id="size" ></td>
+                                </tr>
+                                <tr>
+                                    <td>material</td>
+                                    <td><input type="text" name="material" id="material" placeholder="<?php echo $rows['material'];?>"></td>
+                                </tr>
+                                <tr>
+                                    <td>Note (optional)</td>
+                                    <td>
+                                        <textarea name="note" id="note"  cols="16" rows="5"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="submit" name="submit" value="Send Request">
+                                    </td>
+                                </tr>
+                                <?php
+                                }
+                                ?>
+                            </table>
+                        </form>
+                        
+                    </div>      
+            <?php
+                }?>
 </div>
-
+<?php
+if(isset($_GET["redirect"])){ 
+    if($_GET["redirect"] == "requestsuccess"){
+    ?>
+    <script>
+        window.alert("Your request has been noted ,we will get in contact with you soon");
+    </script>
+    <?php
+    }
+}
+?>
 
 <?php include("footer.php"); ?>

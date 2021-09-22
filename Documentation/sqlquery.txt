@@ -16,8 +16,9 @@ helpdeskemail varchar(50)  NOT NULL
 );
 
 create table product (
-pid int NOT NULL,
+pid int Primary key,
 name  varchar(25) NOT NULL,
+category varchar(50) NOT NULL,
 description  varchar(2500) NOT NULL,
 material  varchar(10)  NOT NULL,
 img  varchar(50) ,
@@ -26,8 +27,8 @@ chart  varchar(50)
 
 create table customer (
 cid int Primary key,
-name varchar(15)  NOT NULL UNIQUE,
-email varchar(50)  NOT NULL,
+name varchar(15)  NOT NULL ,
+email varchar(50)  NOT NULL UNIQUE,
 password  varchar(10)  NOT NULL
 );
 
@@ -35,6 +36,8 @@ create table request(
 rid int NOT NULL primary key,
 pid int NOT NULL,
 cid int NOT NULL,
+size varchar(25),
+material varchar(25),
 order_date date NOT NULL,
 note varchar(2500)
 );
@@ -53,6 +56,6 @@ Insert into contactus values(
 	"info@navkarengg.com"
 	
 );
-Insert into product values(1,"elbow","this is elbow","steel","","");
+Insert into product values(1,"elbow","S.S elbow ","this is elbow","steel","","");
 Insert into customer values(1,"nikhil singh","nikhilsingh526452@gmail.com","nick1234");
-Insert into request values(1,1,1,"2021-08-31","i want to buy this product");
+Insert into request values(1,1,1,"size:5","steel","2021-08-31","i want to buy this product");

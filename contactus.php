@@ -14,7 +14,11 @@
                         </div>
                         <div class="contact flex">
                             <div class="contactleft text-left">phone no</div>
-                            <div class="contactright text-left"><?php echo $rows['phnochar']?></div>
+                            <div class="contactright text-left">
+                                <a class="linktext" href="tel:<?php echo $rows['phnochar']?>">
+                                    <?php echo $rows['phnochar']?>
+                                </a>
+                            </div>
                         </div>
                         <div class="contactus-title">Factory </div>
                         <div class="contact flex">
@@ -24,11 +28,19 @@
                         <div class="contactus-title">Email</div>
                         <div class="contact flex">
                             <div class="contactleft text-left">salesemail</div>
-                            <div class="contactright text-left"><?php echo $rows['salesemail']?></div>
+                            <div class="contactright text-left">
+                                <a class="linktext" href="mailto:<?php echo $rows['salesemail']?>">
+                                    <?php echo $rows['salesemail']?>
+                                </a>
+                            </div>
                         </div>
                         <div class="contact flex">
                             <div class="contactleft text-left">helpdesk</div>
-                            <div class="contactright text-left"><?php echo $rows['helpdeskemail']?></div>
+                            <div class="contactright text-left">
+                                <a class="linktext" href="mailto:<?php echo $rows['helpdeskemail']?>">
+                                    <?php echo $rows['helpdeskemail']?>
+                                </a>    
+                            </div>
                         </div>
                     </div>
                 </div>

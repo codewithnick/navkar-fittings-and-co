@@ -5,14 +5,27 @@
     padding: 0px;
     list-style-type:None;
     text-decoration: None;
+
 }
+textarea:focus, input:focus{
+    outline: none;
+}
+input[type=search]{
+    -moz-appearance: none;/* older firefox */
+    -webkit-appearance: none; /* safari, chrome, edge and ie mobile */
+    appearance: none; /* rest */
+ }
 html {
     height: 100%
 }
 body{
     height: 100%;
     width: 100%;
+    font-family: 'Raleway', sans-serif;
 }
+/*
+font-family: 'Roboto Slab', serif;
+*/
 .text-center{
     text-align: center;
 }
@@ -38,15 +51,32 @@ body{
 .sizefull{
     height: 100%;
 }
+.scrolly{
+    overflow-y: scroll;
+}
+.widthfull{
+    width: 100%;
+}
 nav ,footer {
     background-color: aquamarine;
     padding: 10px;
+    font-family: 'Roboto Slab', serif;
 }
 .bgred{
     background-color: red;
 }
+.errortext{
+    color: rgb(255, 73, 73);
+}
+.linktext{
+    color: blue;
+    text-decoration: underline;
+}
+.textgrey{
+    color: grey;
+}
 .background{
-    background-image: url("../img/bg.jpg");
+    background-image: url("../img/bg.png");
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -77,6 +107,7 @@ nav ,footer {
 }
 .product-title ,.request-number{
     font-size: 20px;
+    font-family: 'Roboto Slab', serif;
     margin-top: 30px;
     text-decoration: underline;
     font-weight: bold;
@@ -96,9 +127,45 @@ nav ,footer {
 .contact{
     justify-content: space-between;
 }
+.contactus-title{
+    font-family: 'Roboto Slab', serif;
+}
 .contactleft{
     width: 30%;
 }
 .contactright{
     width: 70%;
 }
+.tab{
+    font-family: 'Roboto Slab', serif;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.search{
+    height: 9%;
+    
+}
+
+.searchbar{
+    outline: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: large;   
+}
+.searchbutton{
+    border-radius: 0px;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 15%;
+    background-color: #F2AA4C;
+    
+}
+.svg-icon.search-icon {
+    display: inline-block;
+    width: 70%;
+    height: 70%;
+}  

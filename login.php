@@ -10,7 +10,7 @@
         <table>
             <tbody>
                 <tr >
-                    <td >Login Form </td>
+                    <th >Login Form </th>
                 </tr>
                 <tr>
                     <td>Enter Your Email</td>
@@ -32,7 +32,7 @@
         <div class="flex flex-center">
             <div >
                 New here ??, you might want to 
-                <a href="register.php">register first</a>
+                <a class="linktext" href="register.php">register first</a>
             </div>
         </div>
     </form>
@@ -47,7 +47,7 @@ else{
     //logged in
     if (isset($_SESSION["cid"])){
         session_destroy();
-        Redirect("login.php");
+        Redirect("login.php?redirect=logout");
     }
 }
 ?>
@@ -65,7 +65,18 @@ if(isset($_POST["submit"]))
         
         ?>
     <?php
-    Redirect("index.php");
+    Redirect("index.php?redirect=login");
+    }
+}
+?>
+<?php
+if(isset($_GET["redirect"])){ 
+    if($_GET["redirect"] == "logout"){
+    ?>
+    <script>
+        window.alert("You have been logged out");
+    </script>
+    <?php
     }
 }
 ?>

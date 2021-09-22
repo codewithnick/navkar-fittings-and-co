@@ -2,22 +2,26 @@
     margin-top: 50px;
     width: 50%;
 }
+
 table{
     width: 100%;
     justify-content: center;
 }
-td{
+th{
+    font-family: 'Roboto Slab', serif;
+}
+td, th{
     width: 100%;
     padding: 10px;
     text-align: center;
     
 }
 tr{
-    
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 input[type=submit]{
     position: relative;
 width: 50%;
