@@ -20,7 +20,7 @@ if(isset($_POST["submit"])){
     $row=mysqli_fetch_array($result);
     $email=$row[0];
     $subject="Thank You For Your Request";
-    $message="<h1>Your order had been noted</h1><br>
+    $message="<h1>Your order has been noted</h1><br>
     Your Request Id is $mrow<br>
     Your Requested Product Id is $pid<br>
     Your Requested Size is $size<br>

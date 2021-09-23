@@ -26,11 +26,11 @@ if(isset($_POST["submit"]))
                 </tr>
                 <tr>
                     <td>Enter Your Email</td>
-                    <td><input type="email" name="email" id="email"></td>
+                    <td><input type="email" name="email" id="email" required /></td>
                 </tr>
                 <tr>
                     <td>Enter Your Pass</td>
-                    <td><input type="password" name="pass" id="pass"></td>
+                    <td><input type="password" name="pass" id="pass" required /></td>
                 </tr>
                 <tr>
                     <td>Submit</td>

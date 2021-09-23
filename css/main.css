@@ -1,12 +1,21 @@
 * {
 
-    color: black;
+
     margin: 0px;
     padding: 0px;
     list-style-type:None;
     text-decoration: None;
-
 }
+@font-face {
+    font-family: 'ethnocentric';
+    src: url("../font/ethnocentric rg.ttf");
+    
+ }
+ @font-face {
+    font-family: 'sono';
+    src: url("../font/Sono-Medium.ttf");
+    
+ }
 textarea:focus, input:focus{
     outline: none;
 }
@@ -19,9 +28,11 @@ html {
     height: 100%
 }
 body{
+    color: black;
     height: 100%;
     width: 100%;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'sono','Raleway', sans-serif;
+    
 }
 /*
 font-family: 'Roboto Slab', serif;
@@ -58,9 +69,19 @@ font-family: 'Roboto Slab', serif;
     width: 100%;
 }
 nav ,footer {
-    background-color: aquamarine;
+    background-color: #151617;
     padding: 10px;
     font-family: 'Roboto Slab', serif;
+}
+nav,footer ,nav>ul>li>a{
+    
+    color: #dddfd4 ;
+    font-size: 14px;
+}
+nav>ul>li{
+   align-self: center;
+   font-family: "ethnocentric";
+   
 }
 .bgred{
     background-color: red;
@@ -76,7 +97,7 @@ nav ,footer {
     color: grey;
 }
 .background{
-    background-image: url("../img/bg.png");
+    background-image: url("../img/background.jpg");
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -106,8 +127,8 @@ nav ,footer {
     padding: 10px;
 }
 .product-title ,.request-number{
-    font-size: 20px;
-    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    font-family: "ethnocentric";
     margin-top: 30px;
     text-decoration: underline;
     font-weight: bold;
@@ -128,7 +149,8 @@ nav ,footer {
     justify-content: space-between;
 }
 .contactus-title{
-    font-family: 'Roboto Slab', serif;
+    font-family: "ethnocentric";
+    font-size: 14px;
 }
 .contactleft{
     width: 30%;
@@ -137,7 +159,8 @@ nav ,footer {
     width: 70%;
 }
 .tab{
-    font-family: 'Roboto Slab', serif;
+    font-family: "ethnocentric";
+    font-size: 14px;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
     width: 100%;

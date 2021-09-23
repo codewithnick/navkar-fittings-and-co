@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <?php require("head.php"); ?>
 <?php require("connection.php"); ?>
 <body>
@@ -6,7 +9,7 @@
             <div class="admin"></div>
             <div class="admin-name">
             <?php
-                session_start();
+                
                 if(verifysessionadmin()){   
                     ?>Welcome <?php echo $_SESSION["name"];?>
                     <?php

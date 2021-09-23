@@ -14,11 +14,11 @@
                 </tr>
                 <tr>
                     <td>Enter Your Email</td>
-                    <td><input type="email" name="email" id="email"></td>
+                    <td><input type="email" name="email" id="email" required /></td>
                 </tr>
                 <tr>
                     <td>Enter Your Pass</td>
-                    <td><input type="password" name="pass" id="pass"></td>
+                    <td><input type="password" name="pass" id="pass" required /></td>
                 </tr>
                 <tr>
                     <td>Submit</td>
@@ -29,10 +29,22 @@
                 </tr>
             </tbody>
         </table>
-        <div class="flex flex-center">
+        <div class="flex flex-center flex-col">
             <div >
                 New here ??, you might want to 
                 <a class="linktext" href="register.php">register first</a>
+            </div>
+            <div>
+                <?php
+                if(isset($_GET["redirect"])){ 
+                    if($_GET["redirect"] == "failed"){
+                    ?>
+                        <div><a class="errortext" href="resetpass.php">login failed You can Get a New Password here</a></div>
+                    <?php
+                    }
+                }
+                ?>
+
             </div>
         </div>
     </form>
@@ -62,10 +74,10 @@ if(isset($_POST["submit"]))
     $rows=mysqli_fetch_array($result);
     if(mysqli_num_rows($result)==1){
         $_SESSION["cid"] = $rows["cid"];
-        
-        ?>
-    <?php
     Redirect("index.php?redirect=login");
+    }
+    else{
+        Redirect("login.php?redirect=failed");
     }
 }
 ?>

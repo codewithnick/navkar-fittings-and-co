@@ -20,7 +20,7 @@
             }
             else{
                 $cid=$_SESSION["cid"];
-                $sql="SELECT * FROM request where cid=$cid";
+                $sql="SELECT * FROM request where cid=$cid ORDER BY rid Desc";
                 $result=mysqli_query($conn,$sql);
                 while($rows=mysqli_fetch_array($result)){?>
                 <!--start here -->

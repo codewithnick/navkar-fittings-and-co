@@ -22,11 +22,10 @@ if(isset($_POST["submit"])){
 if(isset($_POST["update"])){
        $pid=$_POST["pid"];
         $name=$_POST["name"];     
-        $desc=$_POST["description"];        
+        $desc=$_POST["description"];
+        $cat=$_POST["category"];       
         $mat=$_POST["material"];
-        $img=$_FILES['img'];
-        $fname="./img/".$_FILES['img']['name'];
-        $sql="update product set name='$name',description='$desc',material='$mat',img='$fname',chart='' where pid='$pid'";
+        $sql="update product set name='$name',category=$cat,description='$desc',material='$mat' where pid='$pid'";
         mysqli_query($conn,$sql);
         move_uploaded_file($img['tmp_name'],$fname);
     }   
@@ -53,6 +52,12 @@ if(isset($_GET["pid"])){
                             </td>
                         </tr>
                         <tr>
+                            <td>category</td>
+                            <td>
+                                <input type="text"name="category" id="category" value='<?php echo $rows['category']?>'>
+                            </td>
+                        </tr>
+                        <tr>
                             <td>description</td>
                             <td>
                                 <textarea name="description" id="" cols="16" rows="5">
@@ -65,14 +70,6 @@ if(isset($_GET["pid"])){
                             <td>
                                 <input type="text"name="material" id="material" value=<?php echo $rows['material']?>>
                             </td>
-                        </tr>
-                        <tr>
-                            <td>Image</td>
-                            <td>
-                                
-                                <input type="file" name="img" id="img" accept=".jpg,.jpeg,.png" >
-                            </td>
-                            
                         </tr>
                         <tr>
                             <td>

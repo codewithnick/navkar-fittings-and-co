@@ -9,7 +9,8 @@ if(isset($_POST["submit"]))
         $mrow=$mrow["max(cid)"]+1;
     
         $name=$_POST["uname"];     
-        $email=$_POST["email"];        
+        $email=$_POST["email"];   
+        $tel=$_POST["tel"];      
         $pass=$_POST["pass"];
         $subject="Registration Sucessfull";
         $message="<h1>Welcome $name</h1><br>
@@ -22,12 +23,13 @@ if(isset($_POST["submit"]))
         we will get in contact with you soon<br>
         <h4> Thanks again</h1>
         ";
-        $sql="insert into customer values($mrow,'$name','$email','$pass')";
+        $sql="insert into customer values($mrow,'$name','$email','$tel','$pass')";
         mysqli_query($conn,$sql);
         echo" registered ";
         echo " sending mail ";
-
+        
         sendamail($email,$subject,$message);
+        $_SESSION["cid"] = $mrow;
         Redirect("index.php?redirect=registered");
 }
 
@@ -42,15 +44,19 @@ if(isset($_POST["submit"]))
                 </tr>
                 <tr>
                     <td>Enter Your Name</td>
-                    <td><input type="text" name="uname" id="uname"></td>
+                    <td><input type="text" name="uname" id="uname" required /></td>
                 </tr>
                 <tr>
                     <td>Enter Your Email</td>
-                    <td><input type="email" name="email" id="email"></td>
+                    <td><input type="email" name="email" id="email" required /></td>
+                </tr>
+                <tr>
+                    <td>Enter Your Phone no</td>
+                    <td><input type="tel" name="tel" id="tel" required /></td>
                 </tr>
                 <tr>
                     <td>Enter Your Pass</td>
-                    <td><input type="password" name="pass" id="pass"></td>
+                    <td><input type="password" name="pass" id="pass" required /></td>
                 </tr>
                 <tr>
                     <td>Submit</td>

@@ -3,7 +3,7 @@
         <div class="adminright flex flex-col flex-center">
             <div class="sizefull">
             <?php
-                $sql="SELECT * FROM request ";
+                $sql="SELECT * FROM request ORDER BY rid Desc";
                 $result=mysqli_query($conn,$sql);
                 while($rows=mysqli_fetch_array($result)){?>
                 <!--start here -->
