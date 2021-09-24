@@ -14,6 +14,9 @@
                                 Email
                         </th>
                         <th>
+                                Number
+                        </th>
+                        <th>
                                 Delete
                         </th>
                     </tr>
@@ -32,6 +35,9 @@
                         </td>
                         <td>
                         <?php echo $rows['email']?>
+                        </td>
+                        <td>
+                        <?php echo $rows['phno']?>
                         </td>
                         <td>
                             <a class="errortext" href="delcust.php?cid=<?php echo $rows['cid']?>">Delete</a>

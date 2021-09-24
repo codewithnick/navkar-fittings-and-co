@@ -1,7 +1,7 @@
 <?php include("header.php"); ?>
 <div class="background flex flex-col flex-center">
     <div class="flex flex-center widthfull search">
-        <form action="search.php" class="flex sizefull" style="width:40%">
+        <form action="search.php" class="flex searchbox sizefull" >
             <input type="search"  Placeholder="  Search for our Products" class="searchbar widthfull" name="s" id="s">
             <button type="submit" class="searchbutton ">
             <!-- <div style=" text-align:center; font-family: helvetica, arial, sans-serif;color:black;margin:5px;">

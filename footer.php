@@ -1,5 +1,7 @@
 <footer class="text-center">
-    this site is made by codewithnick
+    <a class="colorwhite" href="https://codewithnick.github.io/">
+        This Site is Made By @codewithnick
+    </a>
 </footer>
 </body>
 </html>

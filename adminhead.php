@@ -2,7 +2,6 @@
 session_start();
 ?>
 <?php require("head.php"); ?>
-<?php require("connection.php"); ?>
 <body>
     <div class="card admin-card flex ">
         <div class="adminleft flex flex-col flex-center">

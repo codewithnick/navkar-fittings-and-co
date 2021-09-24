@@ -1,7 +1,7 @@
 <?php include("header.php"); ?>
 <?php include("connection.php"); ?>
 
-<div class="sizefull flex">
+<div class="sizefull flex product-container">
 <?php
                 $pid=$_GET['pid'];
                 $sql="SELECT * FROM product where pid=$pid";
@@ -9,7 +9,7 @@
                 while($rows=mysqli_fetch_array($result)){?>
             
                 
-                <div class="sizefull product flex flex-col " style="width:50%;">
+                <div class="sizefull product flex flex-col " >
                     <div>
                         <img alt="Product Image Unavailable" src="<?php echo $rows['img'];?>" class="product-img"> 
                     </div>
@@ -26,14 +26,17 @@
                         Description
                     </div>
                     <div class="text-left">
-                    <?php echo $rows['description']?>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore porro mollitia consectetur, dolor quibusdam, quam neque placeat nostrum atque doloremque aspernatur exercitationem rerum. Quas praesentium suscipit, necessitatibus fuga commodi corrupti quis rem quo velit laborum iusto distinctio soluta obcaecati perferendis.
+                        <?php echo $rows['description']?>
+                        
                     </div>
                     <div>
-                    <img alt="chart unavailable" src="<?php echo $rows['chart'];?>" > 
+                        <!-- <img alt="chart unavailable" src="
+                        <?php// echo $rows['chart'];
+                        ?>
+                        " >  -->
                     </div>
                 </div>
-                <div class="flex sizefull" style="width:50%;border-left:1px solid grey">
+                <div class="flex sizefull product-right" >
                         
                         <form action="newrequest.php" method="post" class="widthfull">
                             <input type="hidden" name="pid" value="<?php echo $rows['pid'];?>">

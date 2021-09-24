@@ -6,6 +6,7 @@
     list-style-type:None;
     text-decoration: None;
 }
+
 @font-face {
     font-family: 'ethnocentric';
     src: url("../font/ethnocentric rg.ttf");
@@ -83,8 +84,14 @@ nav>ul>li{
    font-family: "ethnocentric";
    
 }
+.searchbox{
+    width: 40%;
+}
 .bgred{
     background-color: red;
+}
+.colorwhite{
+    color: #dddfd4;
 }
 .errortext{
     color: rgb(255, 73, 73);
@@ -121,6 +128,8 @@ nav>ul>li{
 }
 .product,.request{
     width: 50%;
+}
+.request{
     height: 250px;
 }
 .product>div ,.request>div{

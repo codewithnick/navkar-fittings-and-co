@@ -7,7 +7,7 @@
 ?>
 <div class="sizefull " >
     <div class="sizefull">
-        <div class="sizefull flex flex-center flex-col ">
+        <div class="sizefull flex flex-col request-container">
 
         <?php
             if(!verifysession()){
@@ -41,7 +41,7 @@
                                     Product Name: <?php echo $pname;?>
                                     
                                 </div>
-                                <div class="flex flex-spacearound text-left widthfull">
+                                <div class="flex flex-spacearound text-left widthfull request-content">
                                 <div>Size: <?php echo $rows['size']?></div>
                                 <div>Material: <?php echo $rows['material']?></div>                           
                                 </div>

@@ -1,0 +1,51 @@
+.product-container >div{
+    width: 50%;
+}
+.product-right{
+    border-left:1px solid grey;
+}
+.request-container{
+    align-items: center;
+}
+@media screen and (max-width: 480px) {
+    *{
+        font-size: 14px;
+    }
+    .searchbox{
+        width: 80%;
+        height: 60%;
+    }
+    .aboutus-card , .contactus-card{
+        padding: 5px;
+        margin: 10px;
+    }
+    .product-container{
+        flex-direction: column;
+    }
+    .product-container >div{
+        width: 100%;
+    }
+    .form{
+        padding:10px;
+        margin: 10px;
+        width: auto;
+    }
+    input[type="submit"] {
+        width: auto;
+        padding: 5px;
+    }
+    .product-right{
+        border-top:1px solid grey;
+        border-left: none;
+    }
+    .product-card{
+        flex-direction: column;
+        width: 85%;
+    }
+    .request-card, .request{
+        width: auto;
+    }
+    .request-content{
+        flex-direction: column;
+    }
+  }
