@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/admin.css">
     <link rel="stylesheet" href="./css/form.css">
     <link rel="stylesheet" href="./css/mobile.css">
-    <script src="./js/functions.js">
+    <script src="js/functions.js">
     </script>
 </head>
 <?php require("connection.php"); ?>

@@ -1,7 +1,7 @@
 <?php include("header.php"); ?>
 <?php include("connection.php"); ?>
 
-<div class="sizefull flex product-container">
+<div class="sizefull flex product-container scrolly">
 <?php
                 $pid=$_GET['pid'];
                 $sql="SELECT * FROM product where pid=$pid";

@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php require("head.php"); ?>
 <?php require("connection.php"); ?>
 <?php 
@@ -18,6 +19,7 @@ if(isset($_POST["submit"]))
         <br>your registration has been recorded<br>
         Your username is $name<br>
         Your password is $pass<br>
+        Your phone number is $tel<br>
         You can use these credentials to login and request for your products,<br>
         Do not share these credentails with anyone
         we will get in contact with you soon<br>
@@ -29,7 +31,8 @@ if(isset($_POST["submit"]))
         echo " sending mail ";
         
         sendamail($email,$subject,$message);
-        $_SESSION["cid"] = $mrow;
+        
+        $_SESSION["cid"] = "$mrow";
         Redirect("index.php?redirect=registered");
 }
 

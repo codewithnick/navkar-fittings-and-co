@@ -38,6 +38,9 @@ body{
 /*
 font-family: 'Roboto Slab', serif;
 */
+.hidden{
+    display: none;
+}
 .text-center{
     text-align: center;
 }
@@ -78,6 +81,9 @@ nav,footer ,nav>ul>li>a{
     
     color: #dddfd4 ;
     font-size: 14px;
+}
+nav>ul>li>div,nav>ul>li>a{
+    text-align: center;
 }
 nav>ul>li{
    align-self: center;

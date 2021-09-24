@@ -7,6 +7,9 @@
 .request-container{
     align-items: center;
 }
+.inactive{
+    display: none;
+}
 @media screen and (max-width: 480px) {
     *{
         font-size: 14px;
@@ -47,5 +50,20 @@
     }
     .request-content{
         flex-direction: column;
+    }
+    .active{
+        display: none;
+    }
+    nav>ul>li>div{
+        font-size: 10px;
+    }
+    nav>ul>li{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    .inactive{
+        display: block;
     }
   }

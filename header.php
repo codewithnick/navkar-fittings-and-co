@@ -7,11 +7,16 @@ session_start();
     <header>
 
         <nav class="flex flex-spacearound">
-            <ul class="flex flex-spacearound widthfull" >
-                <li>
+            <ul class="flex flex-spacearound widthfull " id="collapseul">
+                <li class="inactive">
+                    <div id="collapse" class="collapse">
+                        <img src="https://img.icons8.com/material-outlined/24/ffffff/menu--v1.png"/>
+                    </div>
+                </li>
+                <li class="nilactive">
                     <img src="./img/Logo.png" hieght="50px" width="50px">
                 </li>
-                <li>
+                <li class="nilactive">
                     <div>
                         <?php
                             
@@ -32,12 +37,12 @@ session_start();
                         ?>
                     </div>
                 </li>
-                <li> <a href="./index.php"> Home </a></li>
-                <li> <a href="./aboutus.php"> About Us </a> </li>
-                <li> <a href="./products.php"> Products </a> </li>
-                <li> <a href="./requests.php"> Requests </a> </li>
-                <li> <a href="./contactus.php"> Contact us </a> </li>
-                <li> <a href="./login.php">
+                <li class="active"> <a href="./index.php"> Home </a></li>
+                <li class="active"> <a href="./aboutus.php"> About Us </a> </li>
+                <li class="active"> <a href="./products.php"> Products </a> </li>
+                <li class="active"> <a href="./requests.php"> Requests </a> </li>
+                <li class="active"> <a href="./contactus.php"> Contact us </a> </li>
+                <li class="active"> <a href="./login.php">
                         <?php
                     
                     if(!verifysession()){
@@ -47,6 +52,7 @@ session_start();
                         {echo "Logout";}
                     ?>
                     </a> </li>
+                
             </ul>
         </nav>
     </header>

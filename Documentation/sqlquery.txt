@@ -29,7 +29,7 @@ create table customer (
 cid int Primary key,
 name varchar(15)  NOT NULL ,
 email varchar(50)  NOT NULL UNIQUE,
-phno varchar(10)  NOT NULL UNIQUE,
+phno varchar(10)  NOT NULL,
 password  varchar(10)  NOT NULL
 );
 
