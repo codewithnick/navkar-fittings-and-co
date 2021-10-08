@@ -1,1 +1,52 @@
-<mxfile host="app.diagrams.net" modified="2021-10-08T05:27:53.107Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" version="15.4.3" etag="lD8cNVwRun97m8PbxHsv" type="github"><diagram id="H02o8deWCgUyJj6VfPp-">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-10-08T05:34:30.414Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="fhjrD8Rq26Yms0IlqvrK" version="15.4.3" type="github">
+  <diagram id="H02o8deWCgUyJj6VfPp-" name="Page-1">
+    <mxGraphModel dx="868" dy="422" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Xrbn-t0LmyFNUrnStJR5-1" value="" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=60;" vertex="1" parent="1">
+          <mxGeometry x="200" y="70" width="540" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbn-t0LmyFNUrnStJR5-2" value="WEBSERVER" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#9673a6;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="410" y="40" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbn-t0LmyFNUrnStJR5-3" value="PHP" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d6b656;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="450" y="80" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbn-t0LmyFNUrnStJR5-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Xrbn-t0LmyFNUrnStJR5-4" target="Xrbn-t0LmyFNUrnStJR5-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbn-t0LmyFNUrnStJR5-4" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="140" width="90" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbn-t0LmyFNUrnStJR5-5" value="User device" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="35" y="210" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbn-t0LmyFNUrnStJR5-7" value="Https" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="130" y="200" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbn-t0LmyFNUrnStJR5-8" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="365" y="250" width="85" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbn-t0LmyFNUrnStJR5-9" value="" style="verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.smtp_server;" vertex="1" parent="1">
+          <mxGeometry x="580" y="250" width="79.3" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbn-t0LmyFNUrnStJR5-10" value="" style="shape=mxgraph.cisco.servers.file_server;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="140" width="63" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbn-t0LmyFNUrnStJR5-11" value="Fileserver" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="476.5" y="230" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbn-t0LmyFNUrnStJR5-12" value="Database" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="372.5" y="360" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbn-t0LmyFNUrnStJR5-13" value="SMTP server" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="574.65" y="360" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Xrbn-t0LmyFNUrnStJR5-14" value="MYSQL" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d6b656;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="377.5" y="300" width="60" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
