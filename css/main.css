@@ -207,3 +207,15 @@ nav>ul>li{
     width: 70%;
     height: 70%;
 }  
+.product-container >div{
+    width: 50%;
+}
+.product-right{
+    border-left:1px solid grey;
+}
+.request-container{
+    align-items: center;
+}
+.inactive{
+    display: none;
+}

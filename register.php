@@ -25,15 +25,45 @@ if(isset($_POST["submit"]))
         we will get in contact with you soon<br>
         <h4> Thanks again</h1>
         ";
-        $sql="insert into customer values($mrow,'$name','$email','$tel','$pass')";
-        mysqli_query($conn,$sql);
-        echo" registered ";
-        echo " sending mail ";
-        
-        sendamail($email,$subject,$message);
-        
-        $_SESSION["cid"] = "$mrow";
-        Redirect("index.php?redirect=registered");
+        $subjectadmin="New customer";
+        $messageadmin="<h1>you have new cutomer named $name</h1><br>
+        customer phone number is $tel<br>
+        customer email is $email<br>
+        ";
+        $error="";
+        if(strlen($name)>15){
+            $error.="<br> name should be less than 15 characters<br>"    ;
+        }
+        if(strlen($pass)>10){
+            $error.="<br> password should be less than 10 characters<br>"  ;  
+        }
+        if(strlen($tel)>10){
+            $error.="<br> tel should be less than 10 characters<br>" ;   
+        }
+        $sql="select cid from customer where email='$email'";
+        $r=mysqli_query($conn,$sql);
+        if(mysqli_num_rows($r)){
+            $error.="<br> Email already registered<br>" ;   
+        }
+        if($error==""){
+            $sql="insert into customer values($mrow,'$name','$email','$tel','$pass')";
+            if(mysqli_query($conn,$sql)){
+                echo" registered ";
+                echo " sending mail ";
+                
+                sendamail($email,$subject,$message);
+                //sendamail($email,$subjectadmin,$messageadmin);
+                $_SESSION["cid"] = "$mrow";
+                Redirect("index.php?redirect=registered");
+            }else{
+                echo $conn->error;
+                echo "sorry some problem occured while processing request";
+            }
+        }
+        else{    
+            //$sql="";
+            echo "<div class='errortext widthfull text-center'>You Have Entered Wrong Information<br> $error</div>";
+        }
 }
 
 ?>

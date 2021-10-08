@@ -29,7 +29,17 @@ if(isset($_POST["submit"])){
     This is an automated message<br>
     Our team will get in contact with you soon
     ";
+    $subjectadmin="You have a new Request";
+    $messageadmin="<h1>a new order has been noted</h1><br>
+    Customer Id is $cid<br>
+    Request Id is $mrow<br>
+    Requested Product Id is $pid<br>
+    Requested Size is $size<br>
+    Requested material is $mat<br><br>
+    Request Dated:$date<br>
+    ";
     sendamail($email,$subject,$message);
+    //sendamail($email,$subjectadmin,$messageadmin);
     Redirect("product.php?pid=$pid&redirect=requestsuccess");
 }   
 ?>

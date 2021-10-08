@@ -22,6 +22,7 @@
                 $cid=$_SESSION["cid"];
                 $sql="SELECT * FROM request where cid=$cid ORDER BY rid Desc";
                 $result=mysqli_query($conn,$sql);
+                
                 while($rows=mysqli_fetch_array($result)){?>
                 <!--start here -->
                    
@@ -33,7 +34,8 @@
                             <div class="flex flex-col flex-center">
                                 <div>
                                     <?php
-                                        $mysql="select name from product where pid=1";
+                                        $pid=$rows["pid"];
+                                        $mysql="select name from product where pid=$pid";
                                         $res=mysqli_query($conn,$mysql);
                                         $pname=mysqli_fetch_array($res)[0];
                                         

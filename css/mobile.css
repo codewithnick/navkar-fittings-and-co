@@ -1,15 +1,4 @@
-.product-container >div{
-    width: 50%;
-}
-.product-right{
-    border-left:1px solid grey;
-}
-.request-container{
-    align-items: center;
-}
-.inactive{
-    display: none;
-}
+
 @media screen and (max-width: 480px) {
     *{
         font-size: 14px;
